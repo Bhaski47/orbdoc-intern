@@ -1,8 +1,8 @@
-# Customer Delivery App Documentation
+# Customer Discovery App Documentation
 
 ## Introduction
 
-The Customer Delivery App is a full-stack web application developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack.The application ensures data integrity by preventing duplicate entries based on the user's email address.Users can register, provide their email, favorite number, and opt-in for alerts.The application provides feedback to users through toasts or alerts, informing them about successful data addition or duplicate entry prevention.
+The Customer Discovery App is a full-stack web application developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack.The application ensures data integrity by preventing duplicate entries based on the user's email address.Users can register, provide their email, favorite number, and opt-in for alerts.The application provides feedback to users through toasts or alerts, informing them about successful data addition or duplicate entry prevention.
 
 ## Features
 
