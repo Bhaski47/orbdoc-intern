@@ -35,7 +35,7 @@ const Home = () =>{
     }
     return(
         <>
-            <h1 className={styles.header}>Customer Delivery App</h1>
+            <h1 className={styles.header}>Customer Discovery App</h1>
             <div className={styles.formContainer}>
                 {!loader && <form onSubmit={handleSubmit} className={styles.form}>
                     <div className={styles.div}>
