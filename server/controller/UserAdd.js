@@ -2,9 +2,15 @@ const { User } = require('../models/userModel');
 
 const UserAdd = async (req, res) => {
     try {
+        if (!req.body.favno) {
+            return res.status(400).json({ message: "Favorite number is required" });
+        }
+        if (isNaN(req.body.favno)) {
+            return res.status(400).json({ message: "Invalid favorite number" });
+        }
         const user = await User.findOne({ email: req.body.email });
         const favno = parseInt(req.body.favno)
-        if (user) return res.status(200).json({ message: "Email Already Exists", data: user.alert });
+        if (user) return res.status(409).json({ message: "Email Already Exists", data: user.alert });
         
         const newUser = new User({
             email: req.body.email,

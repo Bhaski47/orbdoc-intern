@@ -10,6 +10,7 @@ const Home = () =>{
     const errorToast = (value) =>toast.error(value);
     async function handleSubmit(e){
         e.preventDefault();
+        if(num===undefined || num==='') return alert("Enter Favorite Number")
         try {
             const data = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/user/useradd`,{
             email:email,
@@ -23,9 +24,8 @@ const Home = () =>{
         else{
             success(data.data.message);
         }
-        } catch (error) {
-            errorToast("Error Occurred");
-            console.error(error);
+    } catch (error) {
+            errorToast(error.data);
         }
     }
     return(
