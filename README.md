@@ -1,4 +1,4 @@
-# Customer Delivery App Documentation
+# Customer Discovery App Documentation
 
 ## Introduction
 
